@@ -14,6 +14,7 @@ public class PLayerSrcript : MonoBehaviour
     public GameObject spawner;
     public Text finalScore;
     PostProcessVolume volume;
+    public AudioSource rocketHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class PLayerSrcript : MonoBehaviour
             if (life >= 0)
             {
                 Destroy(hearts[(life)]);
+                rocketHit.Play();
             }
             //if no there is no life left you lose the game
             if (life ==0){
