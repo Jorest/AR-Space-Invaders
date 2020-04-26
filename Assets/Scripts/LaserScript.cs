@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LaserScript : MonoBehaviour
 {
-    public PLayerSrcript aja;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +19,22 @@ public class LaserScript : MonoBehaviour
     //destroy the enemies and count the points
     void OnTriggerEnter(Collider col)
     {
-        if (col.name == "PurpleAlienFighter(Clone)" || col.name== "BioTorpedo Variant(Clone)")
+        if (col.name == "PurpleAlienFighter(Clone)" || col.name== "BioTorpedo Variant(Clone)" || col.name == "PurpleAlienFighter")
         {
-            if (col.name == "PurpleAlienFighter(Clone)")
+            if (col.name == "PurpleAlienFighter(Clone)" || col.name == "PurpleAlienFighter")
             {
+                Debug.Log("shu");
                 GameObject.Find("Player").GetComponent<PLayerSrcript>().OneUp();
-                GameObject.Find("SpaceShip Spawner").GetComponent<SpawnSpaceShips>().DeletedShipDeletedShip();
+                GameObject.Find("SpaceShip Spawner").GetComponent<SpawnSpaceShips>().DeletedShip();
+                //col.gameObject.GetComponent<AlienExplotes>().Explote();
+                // col.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
             }
+            
+           
             Destroy(col.gameObject);
+
+           
         }
     }
 }

@@ -74,7 +74,7 @@ public class SpawnSpaceShips : MonoBehaviour
         }
     }
 
-    public void DeletedShipDeletedShip()
+    public void DeletedShip()
     {
         shipAmount--;
     } 

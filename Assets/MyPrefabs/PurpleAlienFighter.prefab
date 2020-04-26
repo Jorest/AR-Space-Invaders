@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6991386248224289917}
   - component: {fileID: 6991386247351928172}
   - component: {fileID: 1006841450227975900}
+  - component: {fileID: 2369430207856641556}
   m_Layer: 0
   m_Name: PurpleAlienFighter
   m_TagString: Untagged
@@ -220,3 +221,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2369430207856641556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991386248224289907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9157378e7e1e4845a5892188fdd65c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explotion: {fileID: 2106292227044800149, guid: 4d750d51b6cbe9c458f13a402b2f2776,
+    type: 3}
