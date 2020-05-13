@@ -23,7 +23,6 @@ public class LaserScript : MonoBehaviour
         {
             if (col.name == "PurpleAlienFighter(Clone)" || col.name == "PurpleAlienFighter")
             {
-                Debug.Log("shu");
                 GameObject.Find("Player").GetComponent<PLayerSrcript>().OneUp();
                 GameObject.Find("SpaceShip Spawner").GetComponent<SpawnSpaceShips>().DeletedShip();
                 //col.gameObject.GetComponent<AlienExplotes>().Explote();

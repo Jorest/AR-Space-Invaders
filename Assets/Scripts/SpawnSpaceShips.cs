@@ -16,7 +16,7 @@ public class SpawnSpaceShips : MonoBehaviour
         //set random postion of the spawner in a set range
         float x = Random.Range(10.0f, 18.0f) * ChoseSign();
         float z = (18.0f - Mathf.Abs(x)) * ChoseSign();
-        Vector3 direction = new Vector3(x, Random.Range(0, 5.0f), z);
+        Vector3 direction = new Vector3(x, Random.Range(0, 4.0f), z);
         this.gameObject.transform.position = direction;
     }
 

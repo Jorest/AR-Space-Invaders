@@ -13,12 +13,16 @@ public class PLayerSrcript : MonoBehaviour
     public Text pointText;
     public GameObject spawner;
     public Text finalScore;
+    GameObject hud;
     PostProcessVolume volume;
     public AudioSource rocketHit;
     // Start is called before the first frame update
     void Start()
     {
-        //voluma carama effects 
+        //help us check where the rockets hit
+        Input.gyro.enabled = true;
+        hud = GameObject.Find("Game Hud");
+        //voluma carama effects when the game is over
         volume = this.transform.parent.gameObject.GetComponent<PostProcessVolume>();
     }
 
@@ -35,7 +39,40 @@ public class PLayerSrcript : MonoBehaviour
 
         if (collision.gameObject.name == "BioTorpedo Variant(Clone)")
         {
+            //calculate position of where the rocket hit (considering cam rotation)
+            float angle = this.transform.eulerAngles.y;
+
+            float x = collision.gameObject.transform.position.x;
+            float z = collision.gameObject.transform.position.z;
+
+            float nx = x * Mathf.Cos(angle) - z * Mathf.Sin(angle);
+            float nz = z * Mathf.Cos(angle) + x * Mathf.Sin(angle);
+
+            if (Mathf.Abs(nx)>= Mathf.Abs(nz))
+            {
+                if (nx >= 0)
+                {
+                    StartCoroutine( hud.GetComponent<HitAnimations>().HitR());
+                }
+                else
+                {
+                    StartCoroutine(hud.GetComponent<HitAnimations>().HitL());
+                }
+
+            }
+            else
+            {
+                if (nz >= 0)
+                {
+                    StartCoroutine(hud.GetComponent<HitAnimations>().HitF());
+                }
+                else
+                {
+                    StartCoroutine(hud.GetComponent<HitAnimations>().HitB());
+                }
+            }
             Destroy(collision.gameObject);
+
             life--;
             if (life >= 0)
             {
