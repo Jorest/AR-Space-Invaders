@@ -40,7 +40,7 @@ public class PLayerSrcript : MonoBehaviour
         if (collision.gameObject.name == "BioTorpedo Variant(Clone)")
         {
             //calculate position of where the rocket hit (considering cam rotation)
-            float angle = this.transform.eulerAngles.y;
+            float angle = 0.0174533f * this.transform.eulerAngles.y; //to randians
 
             float x = collision.gameObject.transform.position.x;
             float z = collision.gameObject.transform.position.z;

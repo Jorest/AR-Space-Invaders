@@ -310,7 +310,7 @@ MonoBehaviour:
   HB: {fileID: 1407240369}
   HL: {fileID: 889454563}
   HR: {fileID: 60742190}
-  animTime: 1
+  animTime: 0.5
 --- !u!1 &60742190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,8 +1488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: 123}
-  m_SizeDelta: {x: 100, y: 143}
+  m_AnchoredPosition: {x: 11.9, y: 58.3}
+  m_SizeDelta: {x: 100, y: 267.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161397056
 MonoBehaviour:
@@ -1888,8 +1888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: -133.2}
-  m_SizeDelta: {x: 100, y: 143}
+  m_AnchoredPosition: {x: -12.95, y: -59.1}
+  m_SizeDelta: {x: 100, y: 291.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407240371
 MonoBehaviour:

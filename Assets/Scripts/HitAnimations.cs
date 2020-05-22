@@ -8,7 +8,7 @@ public class HitAnimations : MonoBehaviour
     public GameObject HB;
     public GameObject HL;
     public GameObject HR;
-    public float animTime = 1f;
+    public float animTime = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,26 +24,26 @@ public class HitAnimations : MonoBehaviour
     public IEnumerator HitF()
     {
         HF.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(animTime);
         HF.SetActive(false);
 
     }
     public IEnumerator HitB()
     {
         HB.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(animTime);
         HB.SetActive(false);
     }
     public IEnumerator HitL()
     {
         HL.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(animTime);
         HL.SetActive(false);
     }
     public IEnumerator HitR()
     {
         HR.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(animTime);
         HR.SetActive(false);
     }
 
