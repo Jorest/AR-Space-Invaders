@@ -19,12 +19,12 @@ public class camScript : MonoBehaviour
         }
         //enebles gyro
         Input.gyro.enabled = true;
-
+        /*       
         //set resolution and render on the plane 
         WebCamTexture webCameraTexture = new WebCamTexture(1920, 1080, 30);
         webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
         webCameraTexture.Play();
-
+        */
     }
 
     void Update()
